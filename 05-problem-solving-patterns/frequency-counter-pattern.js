@@ -14,7 +14,7 @@ function same1(arr1, arr2){
   return true;
 }
 
-same1([1,2,3,2], [9,1,4,4]);
+// same1([1,2,3,2], [9,1,4,4]);
 
 
 // Refactored solution using FREQUENCY COUNTER PATTERN
@@ -43,7 +43,7 @@ function same(arr1, arr2){
   return true
 }
 
-same([1,2,3,2,5], [9,1,4,4,11]);
+// same([1,2,3,2,5], [9,1,4,4,11]);
 
 
 // Anagram solution using FREQUENCY COUNTER PATTERN
@@ -75,4 +75,24 @@ function validAnagram(first, second) {
 }
 
 // {a: 0, n: 0, g: 0, r: 0, m: 0,s:1}
-validAnagram('anagrams', 'nagaramm')
+// validAnagram('anagrams', 'nagaramm');
+
+
+// Count unique values used FREQUENCY COUNTER PATTERN
+function countUniqueValues1(arr) {
+  if (arr.length === 0) {
+    return 0;
+  }
+  let frequencyCounter = {};
+  for (let i = 0; i < arr.length; i++) {
+    const item = arr[i];
+    frequencyCounter[item] ? frequencyCounter[item]++ : frequencyCounter[item] = 1;
+  }
+  let uniqCounter = 0;
+  for (let keys in frequencyCounter) {
+    uniqCounter++;
+  }
+  return uniqCounter;
+}
+// const resultUniqueCount1 = countUniqueValues1([-2, -1, -1, 0, 1]);
+// console.log(resultUniqueCount1);

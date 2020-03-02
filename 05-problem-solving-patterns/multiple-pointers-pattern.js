@@ -9,7 +9,7 @@ function sumZero1(arr) {
   }
 }
 
-// const result1 = sumZero1([-4, -3, -2, -1, 0, 1, 2, 5]);
+// const result1 = sumZero1([-4, -3, -2, -1, 0, 1, 2, 5]); // result is [-2, 2]
 // console.log(result);
 
 
@@ -30,26 +30,6 @@ function sumZero(arr) {
 }
 // const result = sumZero([-4, -3, -2, -1, 0, 1, 2, 5]);
 // console.log(result);
-
-
-// Count unique values used FREQUENCY COUNTER PATTERN
-function countUniqueValues1(arr) {
-  if (arr.length === 0) {
-    return 0;
-  }
-  let frequencyCounter = {};
-  for (let i = 0; i < arr.length; i++) {
-    const item = arr[i];
-    frequencyCounter[item] ? frequencyCounter[item]++ : frequencyCounter[item] = 1;
-  }
-  let uniqCounter = 0;
-  for (let keys in frequencyCounter) {
-    uniqCounter++;
-  }
-  return uniqCounter;
-}
-// const resultUniqueCount1 = countUniqueValues1([-2, -1, -1, 0, 1]);
-// console.log(resultUniqueCount1);
 
 
 // Count unique values used MULTIPLE POINTERS PATTERN
