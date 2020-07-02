@@ -148,9 +148,9 @@ class BinarySearchTree {
   }
 
   traverseInOrder(node, data) {
-    if (node.left) this.traverseInOrder(node.left, data);
+    node.left && this.traverseInOrder(node.left, data);
     data.push(node.value);
-    if (node.right) this.traverseInOrder(node.right, data);
+    node.right && this.traverseInOrder(node.right, data);
   }
 }
 
@@ -160,7 +160,7 @@ tree.insert(6);
 tree.insert(15);
 tree.insert(3);
 tree.insert(8);
-// tree.insert(7);
+tree.insert(7);
 tree.insert(20);
 
 console.log(tree.depthFirstSearchInOrder());
